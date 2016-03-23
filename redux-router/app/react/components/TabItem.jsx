@@ -1,10 +1,14 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class TabItem extends Component {
   render() {
+    const { currentPath, path, label } = this.props;
+    const isActive = (currentPath === path);
+
     return (
-      <li role="presentation" className={this.props.active ? 'active' : ''}>
-        <a href="#">{this.props.label}</a>
+      <li role="presentation" className={isActive ? "active" : ""}>
+        <Link to={path}>{label}</Link>
       </li>
     );
   }
@@ -12,5 +16,6 @@ export default class TabItem extends Component {
 
 TabItem.propTypes = {
   label: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired
+  currentPath: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired
 }

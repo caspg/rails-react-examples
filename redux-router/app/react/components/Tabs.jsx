@@ -16,8 +16,14 @@ export default class Tabs extends Component {
     ];
 
     return tabs.map((tab, i) => {
-      const isActive = (this.props.currentPath === tab.pathname);
-      return <TabItem key={i} label={tab.label} active={isActive} />;
+      return (
+        <TabItem
+          key={i}
+          label={tab.label}
+          path={tab.pathname}
+          currentPath={this.props.currentPath}
+        />
+      );
     });
   }
 
