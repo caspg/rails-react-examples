@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class TabItem extends Component {
   render() {
     return (
-      <li role="presentation">
+      <li role="presentation" className={this.props.active ? 'active' : ''}>
         <a href="#">{this.props.label}</a>
       </li>
     );
@@ -11,5 +11,6 @@ export default class TabItem extends Component {
 }
 
 TabItem.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired
 }

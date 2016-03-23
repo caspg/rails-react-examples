@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div style={{ border: '1px solid #ccc', borderRadius: 5, padding: 20, marginTop: 50  }}>
-        <Tabs />
+        <Tabs currentPath={this.props.location.pathname} />
 
         <br />
 
