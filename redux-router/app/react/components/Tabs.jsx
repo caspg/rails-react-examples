@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import TabItem from './TabItem';
+import tabs from '../constants/tabs';
 
 export default class Tabs extends Component {
   constructor(props) {
@@ -9,12 +10,6 @@ export default class Tabs extends Component {
   }
 
   renderTabItems() {
-    const tabs = [
-      { label: 'Clicker', pathname: '/' },
-      { label: 'Score Board', pathname: '/score-board' },
-      { label: 'About', pathname: '/about' }
-    ];
-
     return tabs.map((tab, i) => {
       return (
         <TabItem
