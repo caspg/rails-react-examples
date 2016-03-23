@@ -7,9 +7,14 @@ export default class NavLink extends Component {
   }
 
   render() {
+    const { currentPath, path } = this.props;
+    const className = (currentPath === path) ? 'active' : '';
+
     return (
-      <li>
-        <a href="#" onClick={this.handleClick.bind(this)}>{this.props.children}</a>
+      <li  className={className}>
+        <a href="#" onClick={this.handleClick.bind(this)}>
+          {this.props.children}
+        </a>
       </li>
     );
   }
@@ -17,5 +22,6 @@ export default class NavLink extends Component {
 
 NavLink.propTypes = {
   path: PropTypes.string.isRequired,
-  onLinkClick: PropTypes.func.isRequired
+  onLinkClick: PropTypes.func.isRequired,
+  currentPath: PropTypes.string.isRequired
 }

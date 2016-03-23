@@ -6,9 +6,12 @@ import tabs from '../constants/tabs';
 export default class NavbarLinks extends Component {
   renderLinks() {
     return tabs.map((link, i) => {
-      const { onLinkClick } = this.props;
+      const { onLinkClick, routing } = this.props;
+      const currentPath = routing.locationBeforeTransitions ?
+        routing.locationBeforeTransitions.pathname : '';
+
       return (
-        <NavLink key={i} path={link.pathname} onLinkClick={onLinkClick}>
+        <NavLink key={i} path={link.pathname} onLinkClick={onLinkClick} currentPath={currentPath}>
           {link.label}
         </NavLink>
       );
@@ -25,5 +28,6 @@ export default class NavbarLinks extends Component {
 }
 
 NavbarLinks.propTypes = {
-  onLinkClick: PropTypes.func.isRequired
+  onLinkClick: PropTypes.func.isRequired,
+  routing: PropTypes.object.isRequired
 }

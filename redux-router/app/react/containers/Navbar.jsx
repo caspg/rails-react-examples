@@ -23,7 +23,10 @@ class Navbar extends Component {
             <a className="navbar-brand" href="#">RailsReduxRouter Example</a>
           </div>
 
-          <NavbarLinks onLinkClick={this.handleLinkClicked} />
+          <NavbarLinks
+            routing={this.props.routing}
+            onLinkClick={this.handleLinkClicked}
+          />
 
           <div className="pull-right">
             <CounterDisplay
@@ -36,8 +39,11 @@ class Navbar extends Component {
   }
 }
 
-function mapStateToProps(state, x) {
-  return { counter: state.counter };
+function mapStateToProps(state) {
+  return {
+    counter: state.counter,
+    routing: state.routing
+  };
 }
 
 export default connect(mapStateToProps)(Navbar);
