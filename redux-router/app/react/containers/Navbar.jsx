@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
 
 import NavbarLinks from '../components/NavbarLinks';
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLinkClicked = this.handleLinkClicked.bind(this);
+  }
+
+  handleLinkClicked(path) {
+    this.props.dispatch(push(path));
+  }
+
   render() {
     return (
       <nav className="navbar navbar-default" style={{ borderRadius: 0 }}>
@@ -12,14 +22,14 @@ class Navbar extends Component {
             <a className="navbar-brand" href="#">RailsReduxRouter Example</a>
           </div>
 
-          <NavbarLinks />
+          <NavbarLinks onLinkClick={this.handleLinkClicked} />
         </div>
       </nav>
     );
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, x) {
   return { counter: state.counter };
 }
 
