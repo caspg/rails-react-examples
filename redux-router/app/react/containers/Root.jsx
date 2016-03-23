@@ -9,10 +9,9 @@ import ScorePage from './ScorePage';
 import About from '../components/About';
 
 export default class Root extends Component {
-  get history() {
-    // RWRRedux.getStore() provides access to store registered in react/index.js
+  componentWillMount() {
     const mountedStore = RWRRedux.getStore();
-    return syncHistoryWithStore(browserHistory, mountedStore);
+    this.history = syncHistoryWithStore(browserHistory, mountedStore);
   }
 
   render() {
