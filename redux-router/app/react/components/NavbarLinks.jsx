@@ -22,7 +22,7 @@ export default class NavbarLinks extends Component {
 
   render() {
     return (
-      <ul className="nav navbar-nav pull-right">
+      <ul className="nav navbar-nav">
         {this.renderLinks()}
       </ul>
     );

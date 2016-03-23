@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
 import NavbarLinks from '../components/NavbarLinks';
+import CounterDisplay from '../components/CounterDisplay';
 
 class Navbar extends Component {
   constructor(props) {
@@ -23,6 +24,12 @@ class Navbar extends Component {
           </div>
 
           <NavbarLinks onLinkClick={this.handleLinkClicked} />
+
+          <div className="pull-right">
+            <CounterDisplay
+              counter={this.props.counter}
+            />
+          </div>
         </div>
       </nav>
     );
