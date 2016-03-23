@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import NavbarLinks from '../components/NavbarLinks';
 
-export default class Navbar extends Component {
+class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-default" style={{ borderRadius: 0 }}>
@@ -17,3 +18,9 @@ export default class Navbar extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return { counter: state.counter };
+}
+
+export default connect(mapStateToProps)(Navbar);

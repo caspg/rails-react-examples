@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Counter from '../components/Counter';
 import * as CounterActions from '../actions';
 
-class App extends Component {
+class CounterPage extends Component {
   render() {
     const { dispatch, counter } = this.props;
     const boundActionCreators = bindActionCreators(CounterActions, dispatch);
@@ -23,4 +23,4 @@ function mapStateToProps(state) {
   return { counter: state.counter };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(CounterPage);
