@@ -5,6 +5,7 @@ import RWRRedux from 'rwr-redux';
 
 import App from './App';
 import CounterPage from './CounterPage';
+import About from '../components/About';
 
 export default class Root extends Component {
   get history() {
@@ -18,6 +19,7 @@ export default class Root extends Component {
       <Router history={this.history} >
         <Route path="/" component={App}>
           <IndexRoute component={CounterPage} />
+          <Route path="/about" component={About} />
         </Route>
       </Router>
     );
