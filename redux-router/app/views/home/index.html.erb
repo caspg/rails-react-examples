@@ -1,4 +1,12 @@
 <%= react_component 'Navbar' %>
 
 <%= redux_store 'CounterStore', { counter: 5 } %>
-<%= redux_container 'CounterApp' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+      <%= redux_container 'CounterApp' %>
+    </div>
+  </div>
+</div>
+
