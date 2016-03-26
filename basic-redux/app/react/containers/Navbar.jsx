@@ -10,7 +10,7 @@ class Navbar extends Component {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">RailsBasicRedux Example</a>
 
-          <div className="pull-right">
+          <div>
             <CounterDisplay
               counter={this.props.counter}
             />
