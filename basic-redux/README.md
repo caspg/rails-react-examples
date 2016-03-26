@@ -1,28 +1,13 @@
-== README
+# Rails React Redux
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple example of React + Redux integration with Rails using Webpack.
 
-Things you may want to cover:
+Built with:
+* [react_webpack_rails](https://github.com/netguru/react_webpack_rails) -  Webpack setup with React integration.
+* [rwr-redux](https://github.com/netguru/rwr-redux) - integration plugin for `react_webpack_rails` gem.
 
-* Ruby version
+-
 
-* System dependencies
+Navbar and Counter container components shares the same Redux store.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+![](http://i.imgur.com/pxmzKhV.gif)
