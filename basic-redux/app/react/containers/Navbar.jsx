@@ -8,9 +8,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-default" style={{ borderRadius: 0 }}>
         <div className="container-fluid">
-          <div className="navbar-header">
-            <a className="navbar-brand" href="#">RailsReduxRouter Example</a>
-          </div>
+          <a className="navbar-brand" href="#">RailsBasicRedux Example</a>
 
           <div className="pull-right">
             <CounterDisplay
