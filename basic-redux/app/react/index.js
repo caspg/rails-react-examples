@@ -12,5 +12,5 @@ RWRRedux.registerStore('CounterStore', CounterStore);
 import Navbar from './containers/Navbar';
 RWRRedux.registerContainer('Navbar', Navbar);
 
-import CounterApp from './containers/Root';
+import CounterApp from './containers/App';
 RWRRedux.registerContainer('CounterApp', CounterApp);
