@@ -46,4 +46,4 @@ group :development do
 end
 
 gem 'react_webpack_rails'
-gem 'rwr-redux'
+gem 'rwr-redux', path: '/Users/kacper-golinski/Workspace/rwr-redux'
