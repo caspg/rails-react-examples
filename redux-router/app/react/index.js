@@ -5,7 +5,6 @@ RWR.run();
 
 integrationsManager.register('redux-store', RWRRedux.storeIntegrationWrapper);
 integrationsManager.register('redux-container', RWRRedux.containerIntegrationWrapper);
-integrationsManager.register('redux-router', RWRRedux.routerIntegrationWrapper);
 
 import CounterStore from './store';
 RWRRedux.registerStore('CounterStore', CounterStore);
@@ -13,5 +12,5 @@ RWRRedux.registerStore('CounterStore', CounterStore);
 import Navbar from './containers/Navbar';
 RWRRedux.registerContainer('Navbar', Navbar);
 
-import MainRoutes from './routes';
-RWRRedux.registerRoutes('MainRoutes', MainRoutes);
+import CounterApp from './containers/Root';
+RWRRedux.registerContainer('CounterApp', CounterApp);
